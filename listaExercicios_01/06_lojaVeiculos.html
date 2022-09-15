@@ -4,17 +4,46 @@
     // let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
     // let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
     // let carrosHatch = ["308", "Focus", "i30"];
-    
+
     //Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
 
     //Apresente a lista final de cada tipo de veículo.
 
-    //ENTRADA
 
+
+    //ENTRADA
+    let tipos = ["1-SUV", "2-Sedan", "3-Hatch"];
+    const v1 = prompt("Informe o nome do 1° veículo: ");
+    const tipo1 = Number(prompt("Informe o tipo do 1° carro: " + tipos.join(" | "))).toLowerCase();
+    const v2 = prompt("Informe o nome do 2° veículo: ");
+    const tipo2 = Number(prompt("Informe o tipo do 2° carro: " + tipos.join(" | "))).toLowerCase();
+    const v3 = prompt("Informe o nome do 3° veículo: ");
+    const tipo3 = Number(prompt("Informe o tipo do 3° carro: " + tipos.join(" | "))).toLowerCase();
+
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
 
     //PROCESSAMENTO
 
+    if (tipo1 === 1) { carrosSUV.push(v1) }
+    else if (tipo1 === 2) { carrosSedan.push(v1) }
+    else if (tipo1 === 3) { carrosHatch.push(v1) }
+    else { "Um(s) veículo(s) não está correto ou seu tipo não existe" };
+
+    if (tipo2 === 1) { carrosSUV.push(v2) }
+    else if (tipo2 === 2) { carrosSedan.push(v2) }
+    else if (tipo2 === 3) { carrosHatch.push(v2) }
+    else { "Um(s) veículo(s) não está correto ou seu tipo não existe" };
+
+    if (tipo3 === 1) { carrosSUV.push(v3) }
+    else if (tipo3 === 2) { carrosSedan.push(v3) }
+    else if (tipo3 === 3) { carrosHatch.push(v3) }
+    else { "Um(s) veículo(s) não está correto ou seu tipo não existe" };
+
 
     //SAÍDA
+
+    document.write(`${carrosSUV.join(" - ")} </br> <br> ${carrosSedan.join(" - ")} </br> <br> ${carrosHatch.join(" - ")} </br>`)
 
 </script>
