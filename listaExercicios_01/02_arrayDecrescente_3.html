@@ -6,20 +6,32 @@
     //ENTRADA
     const n1 = Number(prompt("Infome um número:"))
     const n2 = Number(prompt("Infome outro número:"))
-    const n3 = Number(prompt("Infome mais um número:"))
+    const n3 = Number(prompt("Infome MAIS UM número:"))
 
     //PROCESSAMENTO
     let valor = [];
     
 
-    if (n1 > n2 && n2 > n3) {
+    if (n1 >= n2 && n2 >= n3) {
         valor.push (n1, n2, n3);
-    }else if (n1 > n2 && n3 > n2){
+    
+    }else if (n1 >= n3 && n3 >= n2){
         valor.push (n1, n3, n2);
+    
+    }else if(n2 >= n1 && n1 >= n3){
+        valor.push(n2, n1, n3)
+   
+    }else if (n2 >= n3 && n3 >= n1){
+        valor.push(n2, n3, n1)
+   
+    }else if(n3 >= n2 && n2 >= n1){
+        valor.push(n3, n2, n1)
+
+    }else{
+        valor.push(n3, n1, n2)
     }
-
-
-
+    
     //SAÍDA
+    document.write(valor)
 
 </script>
