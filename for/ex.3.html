@@ -1,0 +1,36 @@
+<script>
+
+let listaNomes = ["Alberto", "Maria", "Rafael", "Eloisa", "João", "Amanda", "Eduardo"];
+let nomesA = [];
+let nomesNotA = [];
+let novoNome;
+
+
+alert(`Lista completa de nomes: ${listaNomes.join(", ")} `)
+
+const adicionar = prompt("Deseja adicionar algum nome à lista?(Sim | Não)").toLowerCase().trim();
+
+
+if (adicionar === "sim"){
+    novoNome = prompt("Informe o nome que você deseja adiconar a lista de nomes:");
+    novoNome = novoNome[0].toUpperCase() + novoNome.substr(1);
+    listaNomes.push(novoNome);
+
+}
+
+for(let nomes of listaNomes){
+
+    if(nomes.charAt(0) === "A"){
+        nomesA.push(nomes);
+    }else{
+        nomesNotA.push(nomes);
+    }
+}
+document.write(`Lista completa de nomes:<li> ${listaNomes} </li><br>`);
+document.write(`Nomes que começam com a letra A: <br><li> ${nomesA.sort().join(`</li><li>`)}</li><br>
+                Demais nomes:<br> <li>${nomesNotA.sort().join(`</li><li>`)}</li>`)
+
+
+
+
+</script>
